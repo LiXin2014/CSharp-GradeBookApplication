@@ -29,13 +29,13 @@ namespace GradeBook.GradeBooks
 
             int range = numOfStudents / 5;
 
-            if (averageGrade >= grades[range])
+            if (averageGrade >= grades[range*1])
                 return 'A';
-            else if (averageGrade >= grades[range*1])
-                return 'B';
             else if (averageGrade >= grades[range*2])
-                return 'C';
+                return 'B';
             else if (averageGrade >= grades[range*3])
+                return 'C';
+            else if (averageGrade >= grades[range*4])
                 return 'D';
             else
                 return 'F';

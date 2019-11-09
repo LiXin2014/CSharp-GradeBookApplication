@@ -27,15 +27,15 @@ namespace GradeBook.GradeBooks
             grades.Sort();
             grades.Reverse();
 
-            int range = numOfStudents / 5;
+            int range = (int)Math.Ceiling(numOfStudents*0.2);
 
-            if (averageGrade >= grades[range*1])
+            if (averageGrade >= grades[range*1-1])
                 return 'A';
-            else if (averageGrade >= grades[range*2])
+            else if (averageGrade >= grades[range*2-1])
                 return 'B';
-            else if (averageGrade >= grades[range*3])
+            else if (averageGrade >= grades[range*3-1])
                 return 'C';
-            else if (averageGrade >= grades[range*4])
+            else if (averageGrade >= grades[range*4-1])
                 return 'D';
             else
                 return 'F';

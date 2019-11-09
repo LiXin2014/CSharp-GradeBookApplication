@@ -22,7 +22,7 @@ namespace GradeBook.GradeBooks
             List<double> grades = new List<double>();
             foreach(Student student in Students)
             {
-                grades.AddRange(student.Grades);
+                grades.Add(student.AverageGrade);
             }
             grades.Sort();
             grades.Reverse();
